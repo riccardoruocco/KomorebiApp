@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CalmingVisual" representedClassName="CalmingVisual" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="noName" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CalmingVisualSession" inverseName="seen" inverseEntity="CalmingVisualSession"/>
+    </entity>
+    <entity name="CalmingVisualSession" representedClassName="CalmingVisualSession" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="seen" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CalmingVisual" inverseName="noName" inverseEntity="CalmingVisual"/>
+    </entity>
+    <entity name="FavoriteList" representedClassName="FavoriteList" syncable="YES" codeGenerationType="class">
+        <relationship name="entry" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SoundSession" inverseName="noName" inverseEntity="SoundSession"/>
+    </entity>
+    <entity name="Meditation" representedClassName="Meditation" syncable="YES" codeGenerationType="class">
+        <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isCoached" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="noName" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MeditationSession" inverseName="excercise" inverseEntity="MeditationSession"/>
+    </entity>
+    <entity name="MeditationSession" representedClassName="MeditationSession" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="time" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="excercise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Meditation" inverseName="noName" inverseEntity="Meditation"/>
+    </entity>
+    <entity name="Music" representedClassName="Music" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="volume" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="noName" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SoundSession" inverseName="choosenMusic" inverseEntity="SoundSession"/>
+    </entity>
+    <entity name="SoundSession" representedClassName="SoundSession" syncable="YES" codeGenerationType="class">
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="choosenMusic" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Music" inverseName="noName" inverseEntity="Music"/>
+        <relationship name="noName" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavoriteList" inverseName="entry" inverseEntity="FavoriteList"/>
+    </entity>
+    <elements>
+        <element name="CalmingVisual" positionX="-7628.3359375" positionY="-3735.32421875" width="128" height="73"/>
+        <element name="CalmingVisualSession" positionX="-7921.55859375" positionY="-3735.90625" width="128" height="73"/>
+        <element name="FavoriteList" positionX="-7902.48828125" positionY="-3872.73046875" width="128" height="58"/>
+        <element name="Meditation" positionX="-7163.30078125" positionY="-3860.48828125" width="128" height="118"/>
+        <element name="MeditationSession" positionX="-7469.4453125" positionY="-3951.5234375" width="128" height="88"/>
+        <element name="Music" positionX="-7453.265625" positionY="-4138.015625" width="128" height="88"/>
+        <element name="SoundSession" positionX="-7851.36328125" positionY="-4137.48828125" width="128" height="103"/>
+    </elements>
+</model>
