@@ -12,7 +12,7 @@ UserDefaults
 AVFoundation
 
 Autori:
-Riccardo Francesco Ruocco
-Luigi Parente
-Valentina Vollero
+Riccardo Francesco Ruocco,
+Luigi Parente,
+Valentina Vollero,
 Domenico Cafarelli
