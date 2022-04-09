@@ -25,7 +25,7 @@ https://www.youtube.com/watch?v=TCwLt1BcPfM&t=3s
 
 <br />
 Team: <br />
-Riccardo Francesco Ruocco
-Luigi Parente
-Valentina Vollero
+Riccardo Francesco Ruocco <br />
+Luigi Parente <br />
+Valentina Vollero <br />
 Domenico Cafarelli
