@@ -22,3 +22,10 @@ The goal we set as a team was to create an app that would help people relax thro
 
 Live demo:<br />
 https://www.youtube.com/watch?v=TCwLt1BcPfM&t=3s
+
+<br />
+Team: <br />
+Riccardo Francesco Ruocco
+Luigi Parente
+Valentina Vollero
+Domenico Cafarelli
